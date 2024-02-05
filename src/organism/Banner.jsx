@@ -6,11 +6,11 @@ import tailwindLogoWhite from '../assets//tailwindcss-logotype-white.svg'
 import nextLogo from '../../public/next.svg'
 import nextLogoWhite from '../assets/next_js_white-removebg-preview.png'
 import Image from 'next/image'
-import { Button } from "@/components/ui/button"
 import Motion from '@/components/Motion'
-import Link from 'next/link'
+import CvBtn from '@/components/CvBtn'
 
 export default function Banner() {
+
     return (
         <section className='flex flex-col items-center gap-y-5 md:justify-between lg:justify-center p-4 md:px-14 lg:px-28 lg:pt-20'>
             <div className=' mt-5 flex flex-col gap-y-3 md:gap-y-4 lg:gap-y-5 md:w-2/3 lg:w-1/2 items-center '>
@@ -28,11 +28,7 @@ export default function Banner() {
             </div> */}
             <Motion
                 duration={1.5}>
-                <Button variant="secondary" >
-                    <Link href='/public/Curriculum Vitae - Zaky Irsyad Rais.pdf' download>
-                        Curriculum Vitae
-                    </Link>
-                </Button>
+                <CvBtn>Curriculum Vitae</CvBtn>
             </Motion>
 
             <Motion duration={2} className='flex flex-wrap items-center gap-5'>

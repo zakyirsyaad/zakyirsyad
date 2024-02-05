@@ -3,6 +3,8 @@ import "./globals.css";
 import Script from "next/script";
 import { ThemeProvider } from "@/components/theme-provide";
 import Navbar from "@/components/Navbar";
+import { Toaster } from '@/components/ui/toaster';
+import Footer from '@/components/Footer';
 
 
 export const metadata = {
@@ -14,6 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={GeistSans.className}>
+        <Toaster />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
