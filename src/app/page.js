@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main>
       <Banner />
-      <About />
+      {/* <About /> */}
       <Project />
     </main>
   );

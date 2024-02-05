@@ -22,6 +22,7 @@ export default function Navbar() {
                 <p><Link href='/'>Project</Link></p>
                 <ToggleTheme />
             </nav>
+            {/* mobile */}
             <div className='md:hidden flex gap-3'>
                 <ToggleTheme />
                 <Sheet >

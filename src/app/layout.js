@@ -1,10 +1,9 @@
-import { Poppins } from "next/font/google";
+import { GeistSans } from 'geist/font/sans';
 import "./globals.css";
 import Script from "next/script";
 import { ThemeProvider } from "@/components/theme-provide";
 import Navbar from "@/components/Navbar";
 
-const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 
 export const metadata = {
   title: "Zaky Irsyad Rais",
@@ -14,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={GeistSans.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
