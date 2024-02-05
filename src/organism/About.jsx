@@ -12,7 +12,7 @@ export default function About() {
             <Image src={fotoJeky} alt='Foto Profile Website Zaky Irsyad Rais' className=' w-60 h-60 lg:w-72 lg:h-72 object-cover rounded-lg shadow-lg shadow-primary' />
             <div className='items-center md:items-start md:text-left md:w-1/2 flex flex-col gap-y-3 md:gap-y-5'>
                 <p className='uppercase font-bold md:font-extrabold md:text-4xl lg:text-5xl tracking-wider'>proffesional <span className='text-[#40798C]'>Frontend Developer </span> </p>
-                <p className='text-sm text-[#40798C]'>Interesting with me? <span className='text-black dark:text-white font-medium'>Let's Talk</span></p>
+                <p className='text-sm text-[#40798C]'>Interesting with me? <span className='text-black dark:text-white font-medium'>Lets Talk</span></p>
                 <div className='flex flex-wrap items-center gap-5'>
                     <Image src={reactLogo} alt='Tech Logo Website Zaky Irsyad Rais' className='w-10 h-auto object-cover' loading='lazy' />
                     <Image src={nextLogo} alt='Tech Logo Website Zaky Irsyad Rais' className='w-20 h-auto  object-cover dark:hidden' loading='lazy' />
