@@ -8,8 +8,7 @@ import nextLogoWhite from '../assets/next_js_white-removebg-preview.png'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import Motion from '@/components/Motion'
-
-
+import Link from 'next/link'
 
 export default function Banner() {
     return (
@@ -29,7 +28,11 @@ export default function Banner() {
             </div> */}
             <Motion
                 duration={1.5}>
-                <Button variant="secondary" className="">Curriculum Vitae</Button>
+                <Button variant="secondary" >
+                    <Link href='/public/Curriculum Vitae - Zaky Irsyad Rais.pdf' download>
+                        Curriculum Vitae
+                    </Link>
+                </Button>
             </Motion>
 
             <Motion duration={2} className='flex flex-wrap items-center gap-5'>
