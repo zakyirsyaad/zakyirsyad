@@ -67,7 +67,7 @@ export default function ContactDialog() {
                 <DialogHeader>
                     <DialogTitle>Contact Me</DialogTitle>
                     <DialogDescription>
-                        Make changes to your profile here. Click save when you're done.
+                        Make changes to your profile here. Click save when youre done.
                     </DialogDescription>
                 </DialogHeader>
                 <form className="grid gap-4 py-4" onSubmit={handleSubmit}>
