@@ -1,28 +1,30 @@
-// pages/api/sendEmails.js
+// pages/api/sendEmail.js
+
+import sgMail from '@sendgrid/mail';
+
+sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY);
 
 export default async function handler(req, res) {
-    // Enable CORS for this API route
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    res.setHeader('Access-Control-Allow-Credentials', 'true');
+    if (req.method === 'POST') {
+        const { name, email, message } = req.body;
 
-    if (req.method === 'OPTIONS') {
-        // Preflight request, respond with 200 OK
-        res.status(200).end();
-        return;
-    }
+        try {
+            // You can add validation logic here if needed
 
-    // Handle your API logic here
-    try {
-        const { data, error } = await someAsyncFunction(); // Replace with your actual function
-        if (error) {
-            res.status(500).json({ error: 'Internal Server Error' });
-        } else {
-            res.status(200).json(data);
+            // Send email using SendGrid
+            await sgMail.send({
+                to: 'zkyxentertain@gmail.com',
+                from: email,
+                subject: `Message from ${name} `,
+                text: message,
+            });
+
+            res.status(200).json({ success: true, message: 'Email sent successfully' });
+        } catch (error) {
+            console.error('Error sending email:', error);
+            res.status(500).json({ success: false, message: 'Failed to send email' });
         }
-    } catch (error) {
-        console.error('Error:', error.message);
-        res.status(500).json({ error: 'Internal Server Error' });
+    } else {
+        res.status(405).json({ success: false, message: 'Method Not Allowed' });
     }
 }

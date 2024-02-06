@@ -15,48 +15,58 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from './ui/textarea'
 import { supabaseConfig } from '@/api/supabase'
 import { useToast } from './ui/use-toast'
-import { Resend } from 'resend'
+// import sgMail from '@sendgrid/mail'
+
+
 
 export default function ContactDialog() {
+
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const { toast } = useToast();
     const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
-    const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
+
+    // sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Kirim pesan ke Supabase
-        const { data, error } = await supabaseConfig
-            .from('messages')
-            .insert([{ name: capitalizedName, email, message }]);
+        try {
+            // Kirim pesan ke Supabase
+            const { data, error } = await supabaseConfig
+                .from('messages')
+                .insert([{ name: capitalizedName, email, message }]);
 
-        setName('');
-        setEmail('');
-        setMessage('');
+            if (error) {
+                console.error('Error submitting message:', error.message);
+                return;
+            }
 
-
-        if (error) {
-            console.error('Error submitting message:', error.message);
-        } else {
             console.log('Message submitted successfully:', data);
 
-            const { data: resendData, error: resendError } = await resend.emails.send({
-                from: email,
-                to: ['zkyxentertain@gmail.com'],
-                subject: 'Contact Message Jeky',
-                react: message,
-            });
-
+            // await sgMail.send({
+            //     to: 'zkyxentertain@gmail.com',
+            //     from: email,
+            //     subject: 'Contact Message Jeky',
+            //     text: message,
+            // });
 
             toast({
                 title: `${capitalizedName} Send Message Successful`,
-                description: 'Your message has been sent to Zaky Irsyad Rais!, you will receive a reply within a few moments',
+                description: 'Your message has been sent to Zaky Irsyad Rais! You will receive a reply within a few moments.',
             });
+
+            // Clear form fields
+            setName('');
+            setEmail('');
+            setMessage('');
+        } catch (error) {
+            console.error('Error handling form submission:', error.message);
         }
     };
+
+
 
     return (
         <Dialog>
