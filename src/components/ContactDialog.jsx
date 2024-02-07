@@ -71,13 +71,13 @@ export default function ContactDialog() {
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <Button variant="outline">Edit Profile</Button>
+                <Button variant="outline">Get in Touch</Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
                 <DialogHeader>
-                    <DialogTitle>Contact Me</DialogTitle>
+                    <DialogTitle>Get in Touch</DialogTitle>
                     <DialogDescription>
-                        Make changes to your profile here. Click save when youre done.
+                        Send Me Messages and I Will Reply from ur Email.
                     </DialogDescription>
                 </DialogHeader>
                 <form className="grid gap-4 py-4" onSubmit={handleSubmit}>
