@@ -85,19 +85,19 @@ export default function ContactDialog() {
                         <Label htmlFor="name" className="text-right">
                             Name
                         </Label>
-                        <Input id="name" placeholder="Example" value={name} onChange={(e) => setName(e.target.value)} className="col-span-3 capitalize" />
+                        <Input id="name" placeholder="Example" value={name} onChange={(e) => setName(e.target.value)} className="col-span-3 capitalize" required />
                     </div>
                     <div className="grid grid-cols-4 items-center gap-4">
                         <Label htmlFor="email" className="text-right">
                             Email
                         </Label>
-                        <Input id="email" placeholder="example@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)} className="col-span-3" />
+                        <Input id="email" placeholder="example@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)} className="col-span-3" required />
                     </div>
                     <div className="grid grid-cols-4 items-center gap-4">
                         <Label htmlFor="message" className="text-right">
                             Message
                         </Label>
-                        <Textarea placeholder="Type your message here." className="col-span-3" value={message} onChange={(e) => setMessage(e.target.value)} />
+                        <Textarea placeholder="Type your message here." className="col-span-3" value={message} onChange={(e) => setMessage(e.target.value)} required />
                     </div>
                     <DialogFooter>
                         <Button type="submit">Save changes</Button>

@@ -1,5 +1,6 @@
 import Motion from '@/components/Motion'
 import { Instagram, Linkedin } from 'lucide-react'
+import Link from 'next/link'
 import React from 'react'
 
 export default function Footer() {
@@ -13,8 +14,12 @@ export default function Footer() {
                     <div className='flex gap-2 items-center'>
                         <p className='font-medium text-lg'>Found Jeky:</p>
                         <div className='flex gap-3'>
-                            <Instagram />
-                            <Linkedin />
+                            <Link href='https://www.instagram.com/zakyirsyaad/' target='_blank'>
+                                <Instagram />
+                            </Link>
+                            <Link href='https://www.linkedin.com/in/zakyirsyad' target='_blank'>
+                                <Linkedin />
+                            </Link>
                         </div>
                     </div>
                 </Motion>
