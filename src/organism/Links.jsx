@@ -18,7 +18,7 @@ export default function Links() {
                     Curriculum Vitae
                 </ButtonLink>
             </Link>
-            <Link href='www.linkedin.com/in/zakyirsyad' target='_blank'>
+            <Link href='https://www.linkedin.com/in/zakyirsyad' target='_blank'>
                 <ButtonLink>
                     Linked-in
                 </ButtonLink>
