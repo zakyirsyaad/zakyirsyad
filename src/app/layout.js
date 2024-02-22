@@ -3,9 +3,7 @@ import { GeistSans } from 'geist/font/sans';
 import "./globals.css";
 import Script from "next/script";
 import { ThemeProvider } from "@/components/theme-provide";
-import Navbar from "@/components/Navbar";
 import { Toaster } from '@/components/ui/toaster';
-import Footer from '@/organism/Footer';
 
 export const metadata = {
   title: "Zaky Irsyad Rais",
@@ -14,7 +12,7 @@ export const metadata = {
   ogTitle: "Zaky Irsyad Rais - Frontend Developer",
   ogDescription: "Passionate Frontend Developer with expertise in Web Development and creating engaging user experiences.",
   ogImage: "https://utaboiwoepvwdhnczsgd.supabase.co/storage/v1/object/sign/project/og:img?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwcm9qZWN0L29nOmltZyIsImlhdCI6MTcwNzE4MDQ5MCwiZXhwIjoxNzM4NzE2NDkwfQ.QYeRr26prSezV06jCQwjJCaOLXutCc2LXAYejDQNqtc&t=2024-02-06T00%3A48%3A09.798Z", // Gantilah dengan URL gambar yang sesuai
-  ogUrl: "https://zakyirsyad.vercel.app" // Gantilah dengan URL halaman Anda
+  ogUrl: "https://zakyirsyad.my.id" // Gantilah dengan URL halaman Anda
 };
 
 export default function RootLayout({ children }) {
@@ -46,10 +44,9 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          <hr className="md:hidden" />
+
           {children}
-          <Footer />
+
         </ThemeProvider>
         <Script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" />
       </body>
