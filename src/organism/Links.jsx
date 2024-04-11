@@ -12,7 +12,6 @@ export default function Links() {
                     Visit My Website
                 </ButtonLink>
             </Link>
-
             <Link href={linkCV}>
                 <ButtonLink>
                     Curriculum Vitae
@@ -23,7 +22,21 @@ export default function Links() {
                     Linked-in
                 </ButtonLink>
             </Link>
-
+            <Link href='https://www.tiktok.com/@hellojeky' target='_blank'>
+                <ButtonLink>
+                    Tiktok
+                </ButtonLink>
+            </Link>
+            <Link href='https://www.youtube.com/channel/UCNFK5LWk-7Ru01ag3XeVSHw' target='_blank'>
+                <ButtonLink>
+                    Youtube
+                </ButtonLink>
+            </Link>
+            <Link href='https://saweria.co/zakyirsyad' target='_blank'>
+                <ButtonLink>
+                    Support Me !
+                </ButtonLink>
+            </Link>
         </div >
     )
 }
