@@ -6,6 +6,7 @@ const nextConfig = {
                 hostname: 'utaboiwoepvwdhnczsgd.supabase.co',
             },
         ],
+        unoptimized: true,
     },
 };
 

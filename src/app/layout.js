@@ -11,7 +11,7 @@ export const metadata = {
   keywords: "Zaky Irsyad Rais, Jeky, Frontend Developer, Website Developer, Frontend Engineer, Web Development, Web Application, zakyirsyaad, zakyirsyad, zaky, irsyad, rais",
   ogTitle: "Zaky Irsyad Rais - Frontend Developer",
   ogDescription: "Passionate Frontend Developer with expertise in Web Development and creating engaging user experiences.",
-  ogImage: "https://utaboiwoepvwdhnczsgd.supabase.co/storage/v1/object/sign/project/og:img?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwcm9qZWN0L29nOmltZyIsImlhdCI6MTcwNzE4MDQ5MCwiZXhwIjoxNzM4NzE2NDkwfQ.QYeRr26prSezV06jCQwjJCaOLXutCc2LXAYejDQNqtc&t=2024-02-06T00%3A48%3A09.798Z", // Gantilah dengan URL gambar yang sesuai
+  ogImage: "https://uta boiwoepvwdhnczsgd.supabase.co/storage/v1/object/sign/project/og:img?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwcm9qZWN0L29nOmltZyIsImlhdCI6MTcwNzE4MDQ5MCwiZXhwIjoxNzM4NzE2NDkwfQ.QYeRr26prSezV06jCQwjJCaOLXutCc2LXAYejDQNqtc&t=2024-02-06T00%3A48%3A09.798Z", // Gantilah dengan URL gambar yang sesuai
   ogUrl: "https://zakyirsyad.my.id" // Gantilah dengan URL halaman Anda
 };
 
